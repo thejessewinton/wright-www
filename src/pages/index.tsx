@@ -3,15 +3,12 @@ import { PrismicDocument } from '@prismicio/types';
 import type { GetStaticProps, NextPage } from 'next';
 import Head from 'next/head';
 import { createClient } from '../../prismic.config';
-import { trpc } from '../utils/trpc';
 
 type HomePage = NextPage & {
   document: PrismicDocument;
 };
 
 const Home = ({ document }: HomePage) => {
-  const hello = trpc.useQuery(['example.hello', { text: 'from tRPC' }]);
-
   return (
     <>
       <Head>
