@@ -1,5 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500&family=Syne&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500&family=Syne&display=swap");
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+  @apply bg-slate-300 text-neutral-800 dark:bg-neutral-800 dark:text-white;
+}

@@ -1,0 +1,32 @@
+{
+  "id": "galleries",
+  "label": "Galleries",
+  "repeatable": false,
+  "status": true,
+  "json": {
+    "Main": {},
+    "Meta": {
+      "uid": {
+        "type": "UID",
+        "config": {
+          "label": "uid",
+          "placeholder": ""
+        }
+      },
+      "meta_title": {
+        "type": "Text",
+        "config": {
+          "label": "Meta Title",
+          "placeholder": ""
+        }
+      },
+      "meta_description": {
+        "type": "Text",
+        "config": {
+          "label": "Meta Description",
+          "placeholder": ""
+        }
+      }
+    }
+  }
+}

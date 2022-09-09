@@ -14,11 +14,21 @@
     "main_title": [
       {
         "type": "heading1",
-        "text": "Fellow",
+        "text": "College",
         "spans": []
       }
     ],
-    "meta_title": "slide",
-    "meta_description": "size"
+    "featured_galleries": {
+      "id": "mock_document_id",
+      "link_type": "Document",
+      "type": "gallery",
+      "tags": [],
+      "lang": "en-us",
+      "slug": null,
+      "first_publication_date": "1970-01-01T00:00:01+0000",
+      "last_publication_date": "1970-01-01T01:00:00+0000"
+    },
+    "meta_title": "gulf",
+    "meta_description": "principal"
   }
 }

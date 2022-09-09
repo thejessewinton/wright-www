@@ -1,8 +1,8 @@
-import * as prismic from '@prismicio/client';
-import * as prismicH from '@prismicio/helpers';
-import * as prismicNext from '@prismicio/next';
+import * as prismic from "@prismicio/client";
+import * as prismicH from "@prismicio/helpers";
+import * as prismicNext from "@prismicio/next";
 
-import sm from './sm.json';
+import sm from "./sm.json";
 
 /**
  * The project's Prismic repository name.
@@ -17,8 +17,12 @@ export const repositoryName = prismic.getRepositoryName(sm.apiEndpoint);
 // Update the Link Resolver to match your project's route structure
 export function linkResolver(doc) {
   switch (doc.type) {
-    case 'index':
-      return '/';
+    case "homepage":
+      return "/";
+    case "gallery":
+      return `/galleries/${doc.uid}`;
+    case "galleries":
+      return `/galleries`;
     default:
       return null;
   }

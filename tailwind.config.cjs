@@ -3,6 +3,10 @@ module.exports = {
   content: ['./src/**/*.{js,ts,jsx,tsx}'],
   theme: {
     extend: {
+      container: {
+        center: true,
+        padding: '1rem',
+      },
       fontFamily: {
         sans: [
           'Manrope',
@@ -22,5 +26,5 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: [require('prettier-plugin-tailwindcss')],
 };

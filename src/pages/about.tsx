@@ -4,11 +4,11 @@ import type { GetStaticProps, NextPage } from "next";
 import Head from "next/head";
 import { createClient } from "../../prismic.config";
 
-type HomePage = NextPage & {
+type AboutPage = NextPage & {
   document: PrismicDocument;
 };
 
-const Home = ({ document }: HomePage) => {
+const About = ({ document }: AboutPage) => {
   return (
     <>
       <Head>
@@ -24,14 +24,14 @@ const Home = ({ document }: HomePage) => {
   );
 };
 
-export default Home;
+export default About;
 
 export const getStaticProps: GetStaticProps = async ({ previewData }) => {
   const client = createClient({ previewData });
 
   return {
     props: {
-      document: await client.getSingle("homepage"),
+      document: await client.getSingle("about"),
     },
   };
 };
