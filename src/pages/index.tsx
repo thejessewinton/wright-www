@@ -18,7 +18,7 @@ const Home = ({ document }: HomePage) => {
       </Head>
 
       <main className="container mx-auto flex flex-col items-center justify-center min-h-screen p-4">
-        <h1 className="text-5xl md:text-[5rem] leading-normal font-serif text-gray-700">
+        <h1 className="text-[15vw] leading-normal font-serif text-gray-700 mt-auto mb-0">
           <PrismicText field={document.data.main_title} />
         </h1>
       </main>

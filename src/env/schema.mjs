@@ -6,7 +6,7 @@ import { z } from 'zod';
  * This way you can ensure the app isn't built with invalid env vars.
  */
 export const serverSchema = z.object({
-  PRIMSIC_WEBHOOK_SECRET: z.string(),
+  PRISMIC_WEBHOOK_SECRET: z.string(),
 });
 
 /**
