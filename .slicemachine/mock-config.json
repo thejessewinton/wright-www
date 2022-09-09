@@ -1,0 +1,12 @@
+{
+  "_cts": {
+    "homepage": {
+      "main_title": {
+        "config": {
+          "patternType": "HEADING",
+          "blocks": 1
+        }
+      }
+    }
+  }
+}

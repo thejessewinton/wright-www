@@ -1,0 +1,42 @@
+{
+  "id": "homepage",
+  "label": "Homepage",
+  "repeatable": false,
+  "status": true,
+  "json": {
+    "Main": {
+      "main_title": {
+        "type": "StructuredText",
+        "config": {
+          "label": "Main Title",
+          "placeholder": "",
+          "allowTargetBlank": false,
+          "single": "heading1,heading2,heading3,heading5,heading4,heading6"
+        }
+      }
+    },
+    "Meta": {
+      "uid": {
+        "type": "UID",
+        "config": {
+          "label": "uid",
+          "placeholder": ""
+        }
+      },
+      "meta_title": {
+        "type": "Text",
+        "config": {
+          "label": "Meta Title",
+          "placeholder": ""
+        }
+      },
+      "meta_description": {
+        "type": "Text",
+        "config": {
+          "label": "Meta Description",
+          "placeholder": ""
+        }
+      }
+    }
+  }
+}
