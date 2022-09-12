@@ -13,14 +13,15 @@ import {
   repositoryName,
 } from "../../prismic.config";
 import { Default } from "../layouts/default/Default";
-import App, { AppContext, AppProps } from "next/app";
+import NextApp, { AppContext, AppProps } from "next/app";
 import { PrismicDocument } from "@prismicio/types";
 
-type _AppType = AppProps & {
-  navigation: PrismicDocument[];
-};
+interface AppType extends AppProps {
+  navigation: PrismicDocument;
+}
 
-const _App = ({ Component, pageProps, navigation }: _AppType) => {
+const App = ({ Component, pageProps, navigation }: AppType) => {
+  console.log(pageProps, navigation);
   return (
     <PrismicProvider
       linkResolver={linkResolver}
@@ -39,10 +40,13 @@ const _App = ({ Component, pageProps, navigation }: _AppType) => {
   );
 };
 
-_App.getInitialProps = async (context: AppContext) => {
-  const ctx = await App.getInitialProps(context);
-  const client = createClient();
+App.getInitialProps = async (context: AppContext) => {
+  const ctx = await NextApp.getInitialProps(context);
+
+  const client = createClient({ previewData: ctx.pageProps.previewData });
   const navigation = await client.getSingle("navigation");
+
+  console.log(navigation);
 
   return { ...ctx, navigation };
 };
@@ -67,4 +71,4 @@ export default withTRPC<AppRouter>({
     };
   },
   ssr: false,
-})(_App);
+})(App);

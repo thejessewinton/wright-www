@@ -7,7 +7,7 @@ export const Default = ({
   navigation,
 }: {
   children: ReactNode;
-  navigation: PrismicDocument[];
+  navigation: PrismicDocument;
 }) => {
   return (
     <>

@@ -2,8 +2,7 @@ import { PrismicLink, PrismicText } from "@prismicio/react";
 import { PrismicDocument } from "@prismicio/types";
 import Link from "next/link";
 
-export const Header = ({ navigation }: { navigation: PrismicDocument[] }) => {
-  console.log(navigation);
+export const Header = ({ navigation }: { navigation: PrismicDocument }) => {
   return (
     <header className="border-b border-gray-800 py-12 dark:border-neutral-700">
       <div className="container flex items-center justify-center">
@@ -14,11 +13,11 @@ export const Header = ({ navigation }: { navigation: PrismicDocument[] }) => {
           Missy Wright
         </span>
         <nav className="mr-0 ml-auto flex flex-1 justify-end gap-6">
-          {/* {navigation.map((link) => (
+          {navigation?.data.links.map((link: PrismicDocument) => (
             <PrismicLink key={link.id} href={link.uid}>
               <PrismicText field={link.data.meta_title} />
             </PrismicLink>
-          ))} */}
+          ))}
         </nav>
       </div>
     </header>
