@@ -19,6 +19,8 @@ export function linkResolver(doc) {
   switch (doc.type) {
     case "homepage":
       return "/";
+    case "about":
+      return "/about";
     case "gallery":
       return `/galleries/${doc.uid}`;
     case "galleries":
@@ -34,13 +36,22 @@ export function linkResolver(doc) {
  *
  * @param config {prismicNext.CreateClientConfig} - Configuration for the Prismic client.
  */
-export const createClient = (config = {}) => {
-  const client = prismic.createClient(sm.apiEndpoint, config);
-
-  prismicNext.enableAutoPreviews({
-    client,
-    previewData: config.previewData,
-    req: config.req,
+export const createClient = () => {
+  const client = prismic.createClient(sm.apiEndpoint, {
+    routes: [
+      {
+        type: "homepage",
+        path: "/",
+      },
+      {
+        type: "galleries",
+        path: "/galleries",
+      },
+      {
+        type: "gallery",
+        path: "/galleries/:uid",
+      },
+    ],
   });
 
   return client;

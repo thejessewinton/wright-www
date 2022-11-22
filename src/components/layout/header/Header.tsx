@@ -6,8 +6,8 @@ export const Header = ({ navigation }: { navigation: PrismicDocument }) => {
   return (
     <header className="border-b border-gray-800 py-12 dark:border-neutral-700">
       <div className="container flex items-center justify-center">
-        <Link href="/">
-          <a className="ml-0 mr-auto flex-1">Hire Me</a>
+        <Link href="/" className="ml-0 mr-auto flex-1">
+          Hire Me
         </Link>
         <span className="flex-1 items-center text-center font-serif text-2xl">
           Missy Wright

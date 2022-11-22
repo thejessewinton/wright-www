@@ -12,5 +12,9 @@
     "galleries": {},
     "about": {},
     "navigaton": {}
+  },
+  "src/components/slices": {
+    "HireMe": {},
+    "CallToAction": {}
   }
 }
